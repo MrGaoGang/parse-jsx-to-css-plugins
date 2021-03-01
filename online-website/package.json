@@ -2,6 +2,7 @@
   "name": "online-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./parse-jsx-to-css-plugins",
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
     "@babel/core": "7.12.3",
