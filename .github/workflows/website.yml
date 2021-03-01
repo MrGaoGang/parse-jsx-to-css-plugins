@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install
-        run: cd ./online-website && yarn && npm run build && npm run deploy 
+        run: cd ./online-website && npm install && npm run build && npm run deploy 
