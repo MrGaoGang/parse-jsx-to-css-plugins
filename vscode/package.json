@@ -1,0 +1,85 @@
+{
+  "name": "parse-to-css-vscode-plugin",
+  "displayName": "parse-to-css-vscode-plugin",
+  "description": "the parse-jsx-to-css vscode plugin",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "url": "https://github.com/MrGaoGang/parse-jsx-to-css-plugins"
+  },
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:jsx",
+    "onLanguage:vue-html",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./out/extension.js",
+  "publisher": "mrgaogang",
+  "contributes": {
+    "commands": [
+      {
+        "command": "parse-to-css-vscode-plugin.to.less",
+        "title": "Parse to Less"
+      },
+      {
+        "command": "parse-to-css-vscode-plugin.to.css",
+        "title": "Parse to Css"
+      },
+      {
+        "command": "parse-to-css-vscode-plugin.to.scss",
+        "title": "Parse to Scss"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "parse-to-css-vscode-plugin.to.less",
+          "group": "parseJSXToCss"
+        },
+        {
+          "when": "editorFocus",
+          "command": "parse-to-css-vscode-plugin.to.css",
+          "group": "parseJSXToCss"
+        },
+        {
+          "when": "editorFocus",
+          "command": "parse-to-css-vscode-plugin.to.scss",
+          "group": "parseJSXToCss"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run build && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.53.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "parse-jsx-to-css": "^1.0.4"
+  }
+}

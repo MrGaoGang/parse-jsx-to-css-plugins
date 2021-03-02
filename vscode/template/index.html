@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./lib/codemirror.css" />
+    <link rel="stylesheet" href="./theme/material.css" />
+    <script src="./lib/codemirror.js"></script>
+    <script src="./mode/css/css.js"></script>
+    <style>
+      .CodeMirror {
+        height: 600px !important;
+      }
+    </style>
+    <title>Parse To Css</title>
+  </head>
+  <body>
+    <article>
+      <h2>
+        <a href="https://github.com/MrGaoGang/parse-jsx-to-css">Parse to css</a>
+      </h2>
+      <form>
+        <textarea id="code" name="code">
+<!-- REPLACE-CODE -->
+      </textarea
+        >
+      </form>
+      <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+          lineNumbers: true,
+          theme: "material",
+          matchBrackets: true,
+          mode: "<!-- REPLACE-STYLE -->",
+        });
+      </script>
+    </article>
+  </body>
+</html>
