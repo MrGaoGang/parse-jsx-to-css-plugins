@@ -1,3 +1,5 @@
+[English](./ENGLISH.md)
+
 ## 插件的主要作用
 
 此插件主要对[parse-jsx-to-css](https://github.com/MrGaoGang/parse-jsx-to-css)进行了封装，其主要作用为解析 `vue/react` 的 `class/className`,转换成 `less/sass/css `代码。减少编写页面时每次需要手动输入很多 class 的问题。
