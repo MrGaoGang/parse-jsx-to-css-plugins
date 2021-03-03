@@ -41,7 +41,10 @@ export default function Header(props) {
           <Option value="css">css</Option>
           <Option value="sass">sass</Option>
         </Select>
+        <a href="https://marketplace.visualstudio.com/items?itemName=mrgaogang.parse-to-css-vscode-plugin" className="vscode">vscode plugin</a>
+
       </div>
+
       <div
         className="right-container"
         onClick={() => {
