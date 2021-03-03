@@ -38,7 +38,13 @@ function transform(
             panel.reveal(vscode.ViewColumn.Two);
           }
           panel.webview.html = getWebviewContent(context, res, outType);
-       
+          panel?.onDidDispose(
+            () => {              
+              panel = null;
+            },
+            null,
+            context.subscriptions
+          );
         },
       });
     } catch (error) {
@@ -46,15 +52,7 @@ function transform(
     }
   }
 
-  if (panel) {
-    panel.onDidDispose(
-      () => {
-        panel = null;
-      },
-      null,
-      context.subscriptions
-    );
-  }
+ 
 }
 
 function getLanguage(filePath: string) {
@@ -110,7 +108,10 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+  panel = null;
+}
+
 
 function getWebviewContent(
   context: vscode.ExtensionContext,

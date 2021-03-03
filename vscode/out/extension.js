@@ -36,17 +36,15 @@ function transform(filePath, outType, context) {
                         panel.reveal(vscode.ViewColumn.Two);
                     }
                     panel.webview.html = getWebviewContent(context, res, outType);
+                    panel === null || panel === void 0 ? void 0 : panel.onDidDispose(() => {
+                        panel = null;
+                    }, null, context.subscriptions);
                 },
             });
         }
         catch (error) {
             vscode.window.showErrorMessage(`parse the file to ${outType} failed!`);
         }
-    }
-    if (panel) {
-        panel.onDidDispose(() => {
-            panel = null;
-        }, null, context.subscriptions);
     }
 }
 function getLanguage(filePath) {
@@ -82,7 +80,9 @@ function activate(context) {
 }
 exports.activate = activate;
 // this method is called when your extension is deactivated
-function deactivate() { }
+function deactivate() {
+    panel = null;
+}
 exports.deactivate = deactivate;
 function getWebviewContent(context, code, style) {
     let html = getWebViewHtml(context, "./template/index.html");
