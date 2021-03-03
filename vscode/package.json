@@ -2,7 +2,7 @@
   "name": "parse-to-css-vscode-plugin",
   "displayName": "parse-to-css-vscode-plugin",
   "description": "the parse-jsx-to-css vscode plugin",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.53.0"
   },
