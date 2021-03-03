@@ -1,4 +1,4 @@
-[English](./ENGLISH.md)
+[English](https://github.com/MrGaoGang/parse-jsx-to-css-plugins/blob/master/vscode/ENGLISH.md)
 
 ## 插件的主要作用
 
