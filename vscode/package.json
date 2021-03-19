@@ -2,7 +2,7 @@
   "name": "parse-to-css-vscode-plugin",
   "displayName": "parse-to-css-vscode-plugin",
   "description": "the parse-jsx-to-css vscode plugin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.53.0"
   },
@@ -11,7 +11,7 @@
   ],
   "icon": "icon.png",
   "repository": {
-    "url": "https://github.com/MrGaoGang/parse-jsx-to-css-plugins"
+    "url": "https://github.com/MrGaoGang/parse-jsx-to-css"
   },
   "activationEvents": [
     "onLanguage:vue",
@@ -65,7 +65,7 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run build && npm run lint",
     "lint": "eslint src --ext ts",
-    "publish":"vsce package"
+    "publish": "vsce package"
   },
   "devDependencies": {
     "@types/vscode": "^1.53.0",
@@ -81,6 +81,6 @@
     "vscode-test": "^1.5.0"
   },
   "dependencies": {
-    "parse-jsx-to-css": "^1.0.5"
+    "parse-jsx-to-css": "^1.0.6"
   }
 }
